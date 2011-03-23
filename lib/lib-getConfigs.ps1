@@ -1,3 +1,4 @@
+#http://rkeithhill.wordpress.com/2006/06/01/creating-and-using-a-configuration-file-for-your-powershell-scripts/
 function global:getConfigs
 {
 	param(
