@@ -9,21 +9,27 @@ http://stackoverflow.com/questions/138144/whats-in-your-powershell-profile-ps1fi
 Global function that is used to load config files.  Just pass in the path of the file minus the .config ending. I like to have my config files mirror my script names (script.ps1, script.config).
 
 Usage
-:Get-Configs c:\ps1\script
+
+	Get-Configs c:\ps1\script
 
 Returns
-:filled hash of config strings
-:@{}
+
+	filled hash of config strings
+	@{}
 
 ###lib-getList.ps1###
 Global function that is used to load an xml file that contains a list. Takes an xml file in a specific format. This outputs a PSObject. Great for piping!
 
-Usage:
+Usage
+
 	Get-List c:\ps1\servers.list
-Returns:
+
+Returns
+
 	PSObjects
 
 ####Servers.list####
+
 	<list>
 		<item name="dev"  ipaddress="xx.xx.xx.xx" account="adamc" passwordFile="Cred.txt"/>
 		<item name="test" ipaddress="xx.xx.xx.xx" account="adamc" passwordFile="Cred.txt"/>
@@ -34,25 +40,30 @@ Returns:
 Global function taht is used to create a password file for use in generating credentials. Take the location of the file to be created.  This program will function will prompt you for a password.
 
 Usage
-:Create-PasswordFile password.txt
+
+	Create-PasswordFile password.txt
 
 Returns
-:Nothing
+
+	Nothing
 
 ###lib-repeatString.ps1###
 Global function that is used to repeat strings.  I use rainmeter with a mono spaced font to display code and server stats.  It's a nice to have function when working with monospaced fonts
 
 Usage
-:repeatString s 10
+
+	repeatString s 10
 
 Returns
-:ssssssssss
+
+	ssssssssss
 
 ##Useful Scripts##
 ###GetTCBuildStatus.ps1###
 Pings the TeamCity installation and gets the status of the build. This script uses the getConfigs lib function with 2 separate config files
 
 ####GetTCBuildStatus.config####
+
 	<configuration>
 		<scriptSettings>
 			<add key="username" value="XXXXXXX"/>
@@ -62,6 +73,7 @@ Pings the TeamCity installation and gets the status of the build. This script us
 
 ####GetTCBuildStatus.build.config####
 This config file takes a unique build label and the build number you want to query.  You can find the build number on your TeamCity installation.  Check the query string links for the build.
+
 	<configuration>
 		<scriptSettings>
 			<add key="Unique Build Label" value="1"/>
@@ -74,6 +86,7 @@ Pings websites to see if they are up and running.  Will show the error number if
 
 ####PingSite.config####
 This config file takes as many key/value pairs as needed.  Key is the url, value is the label for the site.
+
 	<configuration>
 		<scriptSettings>		
 			<add key="www.google.com" value="Google"/>
