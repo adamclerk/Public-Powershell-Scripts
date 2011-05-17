@@ -8,11 +8,12 @@ http://stackoverflow.com/questions/138144/whats-in-your-powershell-profile-ps1fi
 ###lib-getConfigs.ps1###
 Global function that is used to load config files.  Just pass in the path of the file minus the .config ending. I like to have my config files mirror my script names (script.ps1, script.config).
 
-Usage:
-	Get-Configs c:\ps1\script
-Returns:
-	//filled hash of config strings
-	@{}
+Usage
+:Get-Configs c:\ps1\script
+
+Returns
+:filled hash of config strings
+:@{}
 
 ###lib-getList.ps1###
 Global function that is used to load an xml file that contains a list. Takes an xml file in a specific format. This outputs a PSObject. Great for piping!
@@ -34,7 +35,8 @@ Global function taht is used to create a password file for use in generating cre
 
 Usage
 :Create-PasswordFile password.txt
-Returns:
+
+Returns
 :Nothing
 
 ###lib-repeatString.ps1###
