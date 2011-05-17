@@ -32,19 +32,19 @@ Returns:
 ###lib-createPasswordFile###
 Global function taht is used to create a password file for use in generating credentials. Take the location of the file to be created.  This program will function will prompt you for a password.
 
-Usage:
-	Create-PasswordFile password.txt
+Usage
+:Create-PasswordFile password.txt
 Returns:
-	Nothing
+:Nothing
 
 ###lib-repeatString.ps1###
 Global function that is used to repeat strings.  I use rainmeter with a mono spaced font to display code and server stats.  It's a nice to have function when working with monospaced fonts
 
-Usage:
-	repeatString s 10
+Usage
+:repeatString s 10
 
 Returns
-	//ssssssssss
+:ssssssssss
 
 ##Useful Scripts##
 ###GetTCBuildStatus.ps1###
