@@ -9,10 +9,33 @@ http://stackoverflow.com/questions/138144/whats-in-your-powershell-profile-ps1fi
 Global function that is used to load config files.  Just pass in the path of the file minus the .config ending. I like to have my config files mirror my script names (script.ps1, script.config).
 
 Usage:
-	getConfigs c:\ps1\script
+	Get-Configs c:\ps1\script
 Returns:
 	//filled hash of config strings
 	@{}
+
+###lib-getList.ps1###
+Global function that is used to load an xml file that contains a list. Takes an xml file in a specific format. This outputs a PSObject. Great for piping!
+
+Usage:
+	Get-List c:\ps1\servers.list
+Returns:
+	PSObjects
+
+####Servers.list####
+	<list>
+		<item name="dev"  ipaddress="xx.xx.xx.xx" account="adamc" passwordFile="Cred.txt"/>
+		<item name="test" ipaddress="xx.xx.xx.xx" account="adamc" passwordFile="Cred.txt"/>
+		<item name="prod" ipaddress="xx.xx.xx.xx" account="adamc" passwordFile="Cred.txt"/>
+	</list>
+
+###lib-createPasswordFile###
+Global function taht is used to create a password file for use in generating credentials. Take the location of the file to be created.  This program will function will prompt you for a password.
+
+Usage:
+	Create-PasswordFile password.txt
+Returns:
+	Nothing
 
 ###lib-repeatString.ps1###
 Global function that is used to repeat strings.  I use rainmeter with a mono spaced font to display code and server stats.  It's a nice to have function when working with monospaced fonts
