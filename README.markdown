@@ -37,7 +37,7 @@ Returns
 	</list>
 
 ###lib-createPasswordFile###
-Global function taht is used to create a password file for use in generating credentials. Take the location of the file to be created.  This program will function will prompt you for a password.
+Global function that is used to create a password file for use in generating credentials. Take the location of the file to be created.  This program will function will prompt you for a password.
 
 Usage
 
@@ -46,6 +46,20 @@ Usage
 Returns
 
 	Nothing
+
+###lib-getStaticCredential###
+Global function that returns a credential.  Use the function Create-PasswordFile to create 'c:\password.txt'.  Now you can call Get-StaticCredential to return your credentials.  Great for logging into remote servers.
+
+Usage
+
+	Get-StaticCredential c:\cred.txt domain\username
+	Get-StaticCredential c:\morecred.txt
+	Get-StaticCredential
+
+Returns 
+	Credential for domain\username with the password found in c:\cred.txt
+	Credential for currently logged in user with the password hash found in c:\morecred.txt
+	Credential for currently logged in user with the password hash default found in c:\password.txt
 
 ###lib-repeatString.ps1###
 Global function that is used to repeat strings.  I use rainmeter with a mono spaced font to display code and server stats.  It's a nice to have function when working with monospaced fonts
