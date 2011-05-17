@@ -2,7 +2,7 @@
 
 ##Lib Scripts##
 ###Microsoft.PowerShell_profile.ps1###
-This is my profile for powershell.  It loads anything in the c:\ps1\lib\ folder that starts with lib-*.  I pulled the code for this file off of [Stackoverflow](
+This is my profile for powershell.  It loads anything in the c:\\ps1\\lib\\ folder that starts with lib-*.  I pulled the code for this file off of [Stackoverflow](
 http://stackoverflow.com/questions/138144/whats-in-your-powershell-profile-ps1file/146937#146937).  
 
 ###lib-getConfigs.ps1###
